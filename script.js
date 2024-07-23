@@ -3,8 +3,8 @@ const questions = {
         {
             question: "Seal or Sea lion\nWhich one is the seal?",
             answers: [
-                { image: "https://github.com/lookssame/lookssame/blob/main/images/cute_seal.webp", correct: true },
-                { image: "https://github.com/lookssame/lookssame/blob/main/images/cute_sealion.webp", correct: false }
+                { image: "https://github.com/lookssame/lookssame/raw/main/images/cute_seal.webp", correct: true },
+                { image: "https://github.com/lookssame/lookssame/raw/main/images/cute_sealion.webp", correct: false }
             ],
             explanation: "https://youtu.be/Q8gdbx_A4Hs?t=73"
         },
