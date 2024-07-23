@@ -3,17 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Picker Game</title>
+    <title>Looks Same</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1>Pick the Correct Image</h1>
-        <div class="images">
-            <img id="image1" src="path/to/image1.jpg" alt="Image 1">
-            <img id="image2" src="path/to/image2.jpg" alt="Image 2">
+        <div id="version-container">
+            <h2>Select Quiz Version</h2>
+            <button class="btn" onclick="selectVersion('cute')">Cute Version</button>
+            <button class="btn" onclick="selectVersion('normal')">Normal Version</button>
         </div>
-        <div class="result" id="result"></div>
+        <div id="quiz-container" class="hide">
+            <div id="question-container">
+                <h2 id="question"></h2>
+                <div id="answer-buttons" class="btn-grid">
+                    <button class="btn" onclick="selectAnswer(0)"><img id="img1" src="" alt="Option 1"></button>
+                    <button class="btn" onclick="selectAnswer(1)"><img id="img2" src="" alt="Option 2"></button>
+                </div>
+                <div id="result"></div>
+                <button id="confirm-btn" class="next-btn btn" onclick="confirmAnswer()">Confirm</button>
+                <a id="explanation-link" class="hide" target="_blank">Learn more</a>
+            </div>
+            <div id="score-container" class="hide">
+                <h2>Your Score: <span id="score"></span></h2>
+                <button id="restart-btn" class="btn" onclick="restartQuiz()">Restart</button>
+            </div>
+            <div id="progress-container">
+                <span id="progress-text"></span>
+            </div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
