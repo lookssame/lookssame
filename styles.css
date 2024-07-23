@@ -1,7 +1,7 @@
 body {
+    font-family: Arial, sans-serif;
     background-color: #2c3e50;
     color: #ecf0f1;
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -10,39 +10,92 @@ body {
 }
 
 .container {
+    width: 80%;
+    max-width: 700px;
     text-align: center;
 }
 
-.images {
+.btn {
+    cursor: pointer;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+}
+
+.btn-grid {
     display: flex;
     justify-content: center;
-    margin: 20px 0;
-}
-
-.images img {
-    border: 2px solid #ecf0f1;
-    border-radius: 10px;
-    margin: 0 10px;
-    width: 200px;
-    height: auto;
-    cursor: pointer;
-}
-
-.result {
     margin-top: 20px;
-    font-size: 1.5em;
 }
 
-button {
-    background-color: #3498db;
-    color: #ecf0f1;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
+.btn img {
+    max-width: 200px;
+    height: auto;
+    display: block;
 }
 
-button:hover {
-    background-color: #2980b9;
+.hide {
+    display: none;
+}
+
+.next-btn {
+    margin-top: 20px;
+}
+
+.correct {
+    border: 2px solid green;
+}
+
+.wrong {
+    border: 2px solid red;
+}
+
+.selected {
+    border: 2px solid blue;
+}
+
+.correct-text {
+    color: green;
+    animation: correctAnimation 1s ease-in-out;
+}
+
+@keyframes correctAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.wrong-text {
+    color: red;
+    animation: wrongAnimation 1s ease-in-out;
+}
+
+@keyframes wrongAnimation {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+#explanation-link {
+    color: #bdc3c7;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+}
+
+#explanation-link:hover {
+    text-decoration: underline;
+}
+
+#progress-container {
+    margin-top: 20px;
+    font-size: 1.2rem;
 }
