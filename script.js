@@ -1,7 +1,7 @@
 const questions = {
     cute: [
         {
-            question: "Seal or Sea lion\nWhich one is the seal?",
+            question: "Seal or Sea lion: Which one is the seal?",
             answers: [
                 { image: "https://github.com/lookssame/lookssame/raw/main/images/cute_seal.webp", correct: true },
                 { image: "https://github.com/lookssame/lookssame/raw/main/images/cute_sealion.webp", correct: false }
@@ -9,45 +9,14 @@ const questions = {
             explanation: "https://youtu.be/Q8gdbx_A4Hs?t=73"
         },
         {
-        question: "Alpaca or Llama: Which one is the alpaca?",
+        question: "Alpaca or Llama: Which one is the llama?",
         answers: [
-            { image: "seal_image_url", correct: true },
-            { image: "sea_lion_image_url", correct: false }
+            { image: "https://github.com/lookssame/lookssame/raw/main/images/cute_alpaca.webp", correct: false },
+            { image: "https://github.com/lookssame/lookssame/raw/main/images/cute_llama.webp", correct: true }
         ],
-        explanation: "https://example.com/seal-explanation"
+        explanation: "https://youtu.be/PCtXJoDm41s?t=192"
         },
-        {
-            question: "Seal or Sea lion\nWhich one is the seal?",
-            answers: [
-                { image: "file:///E:/samesame/gpt4good/seal.webp", correct: true },
-                { image: "file:///E:/samesame/gpt4good/sealion.webp", correct: false }
-            ],
-            explanation: "https://youtu.be/Q8gdbx_A4Hs?t=73"
-        },
-        {
-        question: "Alpaca or Llama: Which one is the alpaca?",
-        answers: [
-            { image: "seal_image_url", correct: true },
-            { image: "sea_lion_image_url", correct: false }
-        ],
-        explanation: "https://example.com/seal-explanation"
-        },
-        {
-            question: "Seal or Sea lion\nWhich one is the seal?",
-            answers: [
-                { image: "cute_seal_image_url", correct: true },
-                { image: "cute_sea_lion_image_url", correct: false }
-            ],
-            explanation: "https://example.com/seal-explanation"
-        },
-        {
-            question: "Seal or Sea lion\nWhich one is the seal?",
-            answers: [
-                { image: "cute_seal_image_url", correct: true },
-                { image: "cute_sea_lion_image_url", correct: false }
-            ],
-            explanation: "https://example.com/seal-explanation"
-        },
+
         // Add more cute questions here
     ],
     normal: [
