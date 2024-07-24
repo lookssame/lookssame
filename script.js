@@ -9,24 +9,31 @@ const questions = {
             explanation: "https://youtu.be/Q8gdbx_A4Hs?t=73"
         },
         {
-        question: "Alpaca or Llama: Which one is the llama?",
-        answers: [
-            { image: "https://github.com/lookssame/lookssame/raw/main/images/cute_alpaca.webp", correct: false },
-            { image: "https://github.com/lookssame/lookssame/raw/main/images/cute_llama.webp", correct: true }
-        ],
-        explanation: "https://youtu.be/PCtXJoDm41s?t=192"
+            question: "Alpaca or Llama: Which one is the llama?",
+            answers: [
+                { image: "https://github.com/lookssame/lookssame/raw/main/images/cute_alpaca.webp", correct: false },
+                { image: "https://github.com/lookssame/lookssame/raw/main/images/cute_llama.webp", correct: true }
+            ],
+            explanation: "https://youtu.be/PCtXJoDm41s?t=192"
         },
-
         // Add more cute questions here
     ],
     normal: [
         {
-            question: "Seal or Sea lion\nWhich one is the seal?",
+            question: "Seal or Sea lion: Which one is the seal?",
             answers: [
-                { image: "seal_image_url", correct: true },
-                { image: "sea_lion_image_url", correct: false }
+                { image: "https://github.com/lookssame/lookssame/raw/main/images/normal_seal.webp", correct: true },
+                { image: "https://github.com/lookssame/lookssame/raw/main/images/normal_sealion.jpg", correct: false }
             ],
-            explanation: "https://example.com/seal-explanation"
+            explanation: "https://youtu.be/Q8gdbx_A4Hs?t=73"
+        },
+        {
+            question: "Alpaca or Llama: Which one is the llama?",
+            answers: [
+                { image: "https://github.com/lookssame/lookssame/raw/main/images/normal_alpaca.jpg", correct: false },
+                { image: "https://github.com/lookssame/lookssame/raw/main/images/normal_llama.webp", correct: true }
+            ],
+            explanation: "https://youtu.be/PCtXJoDm41s?t=192"
         },
         // Add more normal questions here
     ]
@@ -78,6 +85,7 @@ function showQuestion(question) {
         button.parentElement.dataset.correct = answer.correct;
     });
     resultElement.textContent = '';
+    explanationLink.href = question.explanation;
     explanationLink.classList.add('hide');
     confirmButton.textContent = "Confirm";
     confirmButton.onclick = confirmAnswer;
@@ -113,7 +121,6 @@ function confirmAnswer() {
         button.classList.add(button.dataset.correct === 'true' ? 'correct' : 'wrong');
         button.disabled = true;
     });
-    explanationLink.href = currentQuestions[currentQuestionIndex].explanation;
     explanationLink.classList.remove('hide');
     confirmButton.textContent = "Next";
     confirmButton.onclick = nextQuestion;
@@ -143,4 +150,8 @@ function updateProgress() {
     progressText.textContent = `Question ${currentQuestionIndex + 1} of ${currentQuestions.length}`;
 }
 
-startQuiz();
+document.addEventListener("DOMContentLoaded", function() {
+    // Initialize quiz by hiding all sections except version selection
+    versionContainer.classList.remove('hide');
+    quizContainer.classList.add('hide');
+});
