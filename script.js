@@ -30,8 +30,8 @@ const questions = {
         {
             question: "Alpaca or Llama: Which one is the llama?",
             answers: [
-                { image: "https://github.com/lookssame/lookssame/raw/main/images/normal_alpaca.jpg", correct: false },
-                { image: "https://github.com/lookssame/lookssame/raw/main/images/normal_llama.webp", correct: true }
+                { image: "https://github.com/lookssame/lookssame/raw/main/images/normal_alpaca.png", correct: false },
+                { image: "https://github.com/lookssame/lookssame/raw/main/images/normal_llama.png", correct: true }
             ],
             explanation: "https://youtu.be/PCtXJoDm41s?t=192"
         },
