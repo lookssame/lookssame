@@ -16,6 +16,15 @@ const questions = {
             ],
             explanation: "https://youtu.be/PCtXJoDm41s?t=192"
         },
+        {
+            question: "Hedgehog or Porcupine: Which one is the Porcupine?",
+            answers: [
+                { image: "https://github.com/lookssame/lookssame/raw/main/images/cute_hedgehog.webp", correct: false },
+                { image: "https://github.com/lookssame/lookssame/raw/main/images/cute_porcupine.jpg", correct: true }
+            ],
+            explanation: "https://youtu.be/Qe2vAikuDWA?t=39"
+        },
+        
         // Add more cute questions here
     ],
     normal: [
@@ -34,6 +43,14 @@ const questions = {
                 { image: "https://github.com/lookssame/lookssame/raw/main/images/normal_llama.png", correct: true }
             ],
             explanation: "https://youtu.be/PCtXJoDm41s?t=192"
+        },
+        {
+            question: "Hedgehog or Porcupine: Which one is the Porcupine?",
+            answers: [
+                { image: "https://github.com/lookssame/lookssame/raw/main/images/normal_hedgehog.webp", correct: false },
+                { image: "https://github.com/lookssame/lookssame/raw/main/images/normal_porcupine.jpg", correct: true }
+            ],
+            explanation: "https://youtu.be/Qe2vAikuDWA?t=39"
         },
         // Add more normal questions here
     ]
